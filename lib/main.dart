@@ -24,7 +24,11 @@ class _MyTextState extends State<MyText> {
                 controller: _controller,
               ),
               Text('Number'),
-              TextButton(onPressed: () {}, child: Text('Submit'))
+              TextButton(
+                  onPressed: () {
+                    print(_controller.text);
+                  },
+                  child: Text('Submit'))
             ],
           ),
         ),
