@@ -23,10 +23,13 @@ class _MyTextState extends State<MyText> {
               TextField(
                 controller: _controller,
               ),
-              Text('Number'),
+              Text(_controller.text),
               TextButton(
                   onPressed: () {
-                    print(_controller.text);
+                    setState(() {
+                      _controller;
+                    });
+                 
                   },
                   child: Text('Submit'))
             ],
