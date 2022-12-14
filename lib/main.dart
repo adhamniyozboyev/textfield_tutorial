@@ -12,18 +12,20 @@ class MyText extends StatefulWidget {
 }
 
 class _MyTextState extends State<MyText> {
+  TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text(
-            'Hello World',
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-            ),
+          child: Column(
+            children: [
+              TextField(
+                controller: _controller,
+              ),
+              Text('Number'),
+              TextButton(onPressed: () {}, child: Text('Submit'))
+            ],
           ),
         ),
       ),
